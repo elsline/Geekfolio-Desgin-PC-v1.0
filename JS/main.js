@@ -443,3 +443,19 @@ gsap.timeline({
     markers: false,
   },
 });
+
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".wrapperr ",
+      start: "top 80%",
+      end: "bottom 80%",
+      scrub: true,
+      markers: false,
+    },
+  })
+  .from(".wrapperr .img-box", {
+    opacity: 0,
+    y: 200,
+    stagger: { amount: 1 },
+  });
